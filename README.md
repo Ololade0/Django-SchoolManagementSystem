@@ -1,0 +1,1 @@
+SchoolManagement system is an application to manage all the educational and administrative tasks without any hassle. It enables schools to digitally manage and monitor daily school activities on a single platform.
