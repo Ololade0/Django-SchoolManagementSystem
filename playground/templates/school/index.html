@@ -1,0 +1,21 @@
+{% extends 'school/base.html' %}
+{%load static%}
+
+{% block title %}
+    Index page
+    {% endblock %}
+    {%block css_styles %}
+    <link rel="stylesheet" href="{% static "style.css"%}">
+    {%endblock %}
+
+
+{% block content %}
+    <nav class="navbar navbar-light" style="background-color:#000080;">
+        <h1 class="student " style="background-color: #4ac1f7">Student Management System <br> Welcome to Semicolon</h1>
+{#    <h1 class="welcome" style="background-color: #4ac1f7">Welcome to Semicolon</h1>#}
+    <a href="#" class="navbar-brand" style="background-color: skyblue;border-width:10px;border-spacing:10px;border-radius: 1px;">Login</a>
+{#    <a class="navbar-link btn-lg" href="{% url 'playground:index' %}" style="background-color:#FFCC33;color:#000000;">DataFlair</a>#}
+{#<a href="{% url 'admin:index' %}" class = 'navbar-link btn-lg' style="background-color:#FFCC33;color:#000000;">Admin</a>#}
+{#    <a href="{% url 'upload-books' %}" class="navbar-link btn-lg" style="background-color:#FFCC33;color:#000000;">Upload Books</a>#}
+</nav>
+    {% endblock %}

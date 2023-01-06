@@ -1,0 +1,47 @@
+{% extends 'school/base.html' %}
+{% load static %}
+{% block content %}
+    <h5>REGISTRATION</h5>
+    {% block title %}
+
+    {% endblock %}
+    {%block css_styles %}
+    <link rel="stylesheet" href="{% static "style.css"%}">
+    {%endblock %}
+
+{% if page == 'login' %}
+<div>
+    <form method="POST" action="">
+        {% csrf_token %}
+{#            <a href="#" class="navbar-brand" style="background-color: skyblue;border-width:10px;border-spacing:10px;border-radius: 1px;">Login</a>#}
+        <label>Username:</label>
+        <input type="text" name="username" placeholder="Enter Username" />
+        <br>
+        <br>
+         <label>Password:</label>
+
+         <div class="Ololade">password must contain letters, numbers and symbol</div>
+
+        <input type="password" name="password" placeholder="Enter Password" />
+
+        <input type="submit" value="Login" />
+    </form>
+
+    <p>havent signed up yet?</p>
+    <a href="{% url 'playground:registration' %}">Sign up</a>
+</div>
+
+{% else %}
+
+<div>
+    <form method="POST" action="">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value="Register" />
+    </form>
+    <p>Already signed up yet?</p>
+    <a href="{% url 'playground:login' %}">Login</a>
+</div>
+{% endif %}
+
+{% endblock content %}
